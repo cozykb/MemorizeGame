@@ -8,35 +8,74 @@
 import SwiftUI
 
 struct ContentView: View {
+    var emojis:[String] = ["🤪","🧐","🤓","🥸","🫥","😈","🤡","🎃"]
+    @State var cont = 1
     var body: some View {
-        HStack {
-            CardView()
-            CardView()
-            CardView(isFront: false)
-            CardView()
-            CardView()
+        VStack{
+            ScrollView{
+                cards
+            }
+            Spacer()
+            cardChanger
         }
         .padding()
-        .foregroundColor(.orange)
+
     }
+    
+    func changeCard(by changecard: Int, symbol: String)-> some View{
+        Button(action:{
+            cont += changecard
+        }, label: {
+            Image(systemName: symbol)
+        })
+        .disabled(cont + changecard < 0 || cont + changecard  >= emojis.count)
+    }
+    
+    var cards: some View{
+        LazyVGrid(columns : [GridItem(.adaptive(minimum: 165))]){
+            ForEach(0..<cont, id:\.self){
+                index in
+                CardView(content: emojis[index])
+                    .aspectRatio(2/2, contentMode: .fit)
+            }
+        }
+        .foregroundColor(.orange)
+        .font(.largeTitle)
+    }
+    
+    
+    var cardChanger: some View{
+        HStack{
+            changeCard(by: -1, symbol:"rectangle.fill.badge.minus")
+            Spacer()
+            changeCard(by: +1, symbol:"rectangle.fill.badge.plus")
+        }
+        .imageScale(.large)
+        .font(.largeTitle)
+    }
+    
+    
+    
 }
 
 
 struct CardView: View{
-    var isFront: Bool = true
-    
+    let content: String
+    @State var isFront = true
+
+    let basecard = RoundedRectangle(cornerRadius: 12)
     var body: some View{
         ZStack{
-            if isFront{
-                RoundedRectangle(cornerRadius: 12)
-                    .foregroundColor(.white)
-                RoundedRectangle(cornerRadius: 12)
-                    .strokeBorder(lineWidth: 2)
-                Text("🤪")
+            Group{
+                basecard.foregroundColor(.white)
+                basecard.strokeBorder(lineWidth: 2)
+                Text(content)
             }
-            else{
-                RoundedRectangle(cornerRadius: 12)
-            }
+            .opacity(isFront ? 1 : 0)
+            basecard.opacity(isFront ? 0 : 1)
+        }
+        .onTapGesture{
+            isFront.toggle()
         }
     }
 }
