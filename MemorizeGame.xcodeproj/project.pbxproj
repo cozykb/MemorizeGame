@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		E18ED8882AB4B1B2000562A1 /* MemorizeGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18ED8872AB4B1B2000562A1 /* MemorizeGameApp.swift */; };
-		E18ED88A2AB4B1B2000562A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18ED8892AB4B1B2000562A1 /* ContentView.swift */; };
+		E18ED88A2AB4B1B2000562A1 /* MemorizeGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18ED8892AB4B1B2000562A1 /* MemorizeGameView.swift */; };
 		E18ED88C2AB4B1B3000562A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E18ED88B2AB4B1B3000562A1 /* Assets.xcassets */; };
 		E18ED88F2AB4B1B3000562A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E18ED88E2AB4B1B3000562A1 /* Preview Assets.xcassets */; };
+		E1A61CEB2ABB359800B70F9B /* MemorizeGameCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A61CEA2ABB359800B70F9B /* MemorizeGameCore.swift */; };
+		E1A61CED2ABB35B900B70F9B /* EmojiMemorizeGameHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A61CEC2ABB35B900B70F9B /* EmojiMemorizeGameHolder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E18ED8842AB4B1B2000562A1 /* MemorizeGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemorizeGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18ED8872AB4B1B2000562A1 /* MemorizeGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeGameApp.swift; sourceTree = "<group>"; };
-		E18ED8892AB4B1B2000562A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E18ED8892AB4B1B2000562A1 /* MemorizeGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeGameView.swift; sourceTree = "<group>"; };
 		E18ED88B2AB4B1B3000562A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E18ED88E2AB4B1B3000562A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E1A61CEA2ABB359800B70F9B /* MemorizeGameCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeGameCore.swift; sourceTree = "<group>"; };
+		E1A61CEC2ABB35B900B70F9B /* EmojiMemorizeGameHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemorizeGameHolder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,9 @@
 			isa = PBXGroup;
 			children = (
 				E18ED8872AB4B1B2000562A1 /* MemorizeGameApp.swift */,
-				E18ED8892AB4B1B2000562A1 /* ContentView.swift */,
+				E18ED8892AB4B1B2000562A1 /* MemorizeGameView.swift */,
+				E1A61CEA2ABB359800B70F9B /* MemorizeGameCore.swift */,
+				E1A61CEC2ABB35B900B70F9B /* EmojiMemorizeGameHolder.swift */,
 				E18ED88B2AB4B1B3000562A1 /* Assets.xcassets */,
 				E18ED88D2AB4B1B3000562A1 /* Preview Content */,
 			);
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E18ED88A2AB4B1B2000562A1 /* ContentView.swift in Sources */,
+				E1A61CED2ABB35B900B70F9B /* EmojiMemorizeGameHolder.swift in Sources */,
+				E18ED88A2AB4B1B2000562A1 /* MemorizeGameView.swift in Sources */,
 				E18ED8882AB4B1B2000562A1 /* MemorizeGameApp.swift in Sources */,
+				E1A61CEB2ABB359800B70F9B /* MemorizeGameCore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +275,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MemorizeGame/Preview Content\"";
+				DEVELOPMENT_TEAM = XQ5P5LB58X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -295,6 +304,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MemorizeGame/Preview Content\"";
+				DEVELOPMENT_TEAM = XQ5P5LB58X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
